@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title></title>
+    <style>
+                  @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+      html, body {
+                              -webkit-user-select: none; /* Chrome, Safari, Opera */
+            -moz-user-select: none;    /* Firefox */
+            -ms-user-select: none;     /* Internet Explorer/Edge */
+            user-select: none;         /* Non-prefixed version */
+        background-color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+      }
+
+        .category-bar {
+            position: relative;
+  top: 46px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-around;
+    align-content: space-between;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #00881f;
+    border-bottom: 2px solid #00881f;
+    box-shadow: 0 3px 6px #737373;
+        }
+.category img{
+  background-color: #ffffff;
+  width: 40px;
+          height: 40px;
+          margin:0;
+          padding: 5px;
+          display: flex;
+          border-radius: 5px;
+          border: 1px solid #000000;
+          box-shadow: 0 4px 6px #383838e4;
+}
+.category p{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+}
+.category {
+            font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 12px;
+  position: relative;
+  top: -7px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: space-between;
+          flex-wrap: wrap;
+            background: none;
+            padding: 0;
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            text-decoration: none;
+            text-align:center;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #ffffff;
+            border: none;
+        }
+
+        .category:hover{
+            color: #000000;
+            border-radius: 6px;
+            margin: 0;
+            padding: 5px;
+            height: 65px;
+}
+        .content-section {
+            display: none;
+            padding: 0;
+            background-color: #ffffff;
+            margin-top: 10px;
+            border: 0px solid #ddd;
+        }
+                .main {
+  font-family: Georgia;
+  font-weight: 400;
+  font-style: normal;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          align-content: center;
+          flex-wrap: wrap;
+            background-color: #fff;
+            padding: 0;
+            width: 100px;
+            height: 120px;
+            margin: 5px;
+            text-decoration: none;
+            text-align:center;
+            border-radius: 8px;
+            cursor: pointer;
+            color: #000000;
+            border: 2px solid #00881f;
+            box-shadow: 0 4px 8px #5353538f;
+            font-size: 14px;
+}
+.barre{
+  font-family: Georgia;
+  font-weight: 400;
+  font-style: normal;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          align-content: center;
+          flex-wrap: wrap;
+            background: none;
+            padding: 0;
+            width: 100%;
+            height: 30px;
+            margin: 5px;
+            text-decoration: none;
+            text-align:center;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+          
+            font-size: 14px;
+}
+        .main p{
+            padding: 8px;
+            font-size: 10px;
+            margin-bottom: -12px;
+        }
+        .main img{
+                 width: 70px;
+          height: 50px;
+          margin: 0;
+          padding:8px;
+        }
+        .main:hover{
+    background: linear-gradient(to right, #00cd7d, #00881f);
+    color: #ffffff;
+    border: 2px solid #a70000;
+    border-radius: 5;
+}
+          .menu {
+            display: flex; /* مخفي بشكل افتراضي */
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      background-color: none;
+      margin: 0;
+      padding: 0;
+        }
+        .menu-btn {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+    font-size: 24px;
+    margin: 0;
+    border: none;
+    color: #ffffff;
+    background: none;
+}
+.search {
+  font-family: "Oswald", sans-serif;
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  top: 13px;
+  font-size: 25px;
+  color: #ffffff;
+}
+    .main li{
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      margin: 0;
+      padding: 5px;
+      flex-wrap: wrap;
+    }
+    .navbar {
+  position: fixed;
+  top:0;
+  right: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+    width: 100%;
+    height: 120px;
+    border-bottom: 2px solid #00881f;
+    background-color: #00881f;
+}
+    .navba {
+  position: fixed;
+  top: 0;
+  right: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+    width: 100%;
+    height: 80px;
+    border-bottom: 0px solid #880000;
+    background-color: #00881f;
+}
+.top-bar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+  top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    height: 0px;
+    justify-content: space-between;
+    background-color: #00881f;
+}
+.icon {
+    font-size: 24px;
+    margin: 0 5px;
+    padding: 0;
+    position: relative;
+  
+}
+.header{
+          margin-top: 120px;
+          display: flex;
+          justify-content: center;
+          padding: 0;
+        }
+        .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background: #fff;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+      transition: right 0.3s;
+      z-index: 1000;
+      display: flex;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    .sidebar ul li {
+      position: relative;
+      top: -15px;
+      border-bottom: 1px solid #00881f;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 8px #3030307a;
+    }
+    .sidebar ul li a {
+      display: flex;
+      margin: 0;
+      padding: 5px;
+      width: 100%;
+      text-decoration: none;
+      color: #000000;
+      font-size: 18px;
+    }
+    .sidebar ul li a i {
+      padding: 5px;
+      margin-left: 5px;
+      font-size: 20px;
+    }
+    .sidebar ul li a:hover {
+      background: #00881f;
+      color: #fff;
+      width: 100%;
+    }
+    .sidebar .close-btn {
+      display: none;
+      background: none;
+      padding: 0;
+      margin: 0;
+      width: 30px;
+      height: 30px;
+      border: none;
+      color: #fff;
+      font-size: 0px;
+      position: absolute;
+      top: 10px;
+      left: 28px;
+      cursor: pointer;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.259);
+      display: none;
+      z-index: 999;
+    }
+     ul .logo{
+       position: relative;
+       top: -18px;
+       width: 100%;
+       margin: 0;
+       text-align: center;
+       padding: 16px 12px;
+       height: 120px;
+       background-color: #00881f;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: #fff;
+       border-bottom: 1px solid #2b2b2b;
+     }
+     .{
+       position: fixed;
+     }
+    </style>
+</head>
+<body>
+   <div class="navbar">
+        <div class="top-bar">
+<span onclick="window.open('go:https/search')" class="search"><i class="fas fa-search"></i></span>
+<span class="search">AYMEN TV</span>
+<span class="search"></span>
+</div>
+ <div class="navbar1">
+      <div class="category-bar">
+        <button class="category" onclick="openSection('bein')"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/BeIN-Sports-Logo.svg" alt=""><p>bein sports</p></button>
+        <button class="category" onclick="openSection('ssc')"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC HD</p></button>
+        <button class="category" onclick="openSection('sports')"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4yCSbPtid76nZy0fIllKVfEQ3aug79nMiCA&amp;usqp=CAU" alt=""><p>SPORTS HD</p></button>
+        <button class="category" onclick="openSection('maroc')"><img src="https://png.pngtree.com/png-clipart/20220704/ourmid/pngtree-morocco-flag-png-image_5686509.png" alt=""><p>MAROC HD</p></button>
+        <button class="category" onclick="openSection('france')"><img src="https://png.pngtree.com/png-clipart/20220804/ourmid/pngtree-france-flag-pin-badge-png-image_6098798.png" alt=""><p>FRANCE HD</p></button>
+        <button class="category" onclick="openSection('spain')"><img src="https://png.pngtree.com/png-clipart/20231018/original/pngtree-spain-spanish-patriotism-spain-picture-image_13178525.png" alt=""><p>SPAIN HD</p></button>
+        <button class="category" onclick="openSection('kids')"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1FGTKwe5pbmE4uoMLUFlJ3AhhGpQ4CyuNr6BX3LXSViRI_XR2_NofTMzKSdBLnqKk6qfdAQI6uxNSbUTlv4Bcyrm-OzfuTUG6ped3vUpKpY8ydY3i7Ox2m36y612fDfQJfuUq_iI9j0J0qzRTiNZTsAJcyPZSii-bJZHzhiGGmFRsPT-4BGqT_jDiV5k/s2000/Picsart_24-11-24_16-55-33-068.jpg" alt=""><p>KIDS HD</p></button>
+        <button class="category" onclick="openSection('documentary')"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/AlWathaeqya.png" alt=""><p>DOCUMENTARY</p></button>
+        <button class="category" onclick="openSection('mbc')"><img src="https://upload.wikimedia.org/wikipedia/commons/8/80/MBC_Group.png" alt=""><p>MBC TV</p></button>
+        <button class="category" onclick="openSection('news')"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigmr4fmuejc0JRN3gEQSNuaCH1OazdAr26JCMJHSjPI3uFZVG9-4-jYEh4h5GAWpyNX5xX2v45BQu-jYBgP3d7J4q0BhEKlrx-6gHCyhocVODIMby7kFzZhduPy1q34myjrw4lf5PYaPDLQStCKz2sQCUWisybrwDoM8EETgwXyQKxvMxU9oik5hyphenhyphena5Uk/s2000/Picsart_24-11-06_16-52-53-557.png" alt=""><p>NEWS TV</p></button>
+        <button class="category" onclick="openSection('islam')"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2k3IGoly1jYIDSYZoavcvZCj_C5E9XdJjhVWENAKfIZMzXxPrZ9_6xDH2wzOUw9BFE3f_1U2dLZLCSIkagb-1MjXL53pIZ4l9i5sBhADfCur8-H7TYg0pcE2Ukija4BBV1jOnbq1hneja3m4AsyMUoOwpHyJV6bucvLJeQKq-NoeEk6aXR2I89xX1aJc/s720/IMG_20241103_144955.png" alt=""><p>ISLAM TV</p></button>
+        <button class="category" onclick="openSection('osn')"><img src="https://iconape.com/wp-content/png_logo_vector/osn.png" alt=""><p>OSN TV</p></button>
+        <button class="category" onclick="openSection('rotana')"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSVcu7_hLzD9b4yP4pMxaQ-lrYrDqr0Irw9g&usqp=CAU" alt=""><p>ROTANA TV</p></button>
+    </div>
+    </div>
+    </div>
+     <button id="openMenu" class="menu-btn"><i class="fas fa-bars"></i></button>
+    <div class="header">
+    <section id="bein" class="content-section">
+  <div id="bein" class="menu">
+<div onclick="window.open('go:bein1')" class="main"><img src="https://i.imgur.com/Vtk2cGI.png" alt="gh"><p>BEIN SPORT 1</p></div>
+    <div onclick="window.open('go:bein2')" class="main"><img src="https://i.imgur.com/vUJZSvs.png" alt=""><p>BEIN SPORT 2</p></div>
+    <div onclick="window.open('go:bein3')" class="main"><img src="https://i.imgur.com/UYSMao3.png" alt="gh"><p>BEIN SPORT 3</p></div>
+    <div onclick="window.open('go:bein4')" class="main"><img src="https://i.imgur.com/vwAgJNi.png" alt="gh"><p>BEIN SPORT 4</p></div>
+    <div onclick="window.open('go:bein5')" class="main"><img src="https://imgur.com/2Rha5aY.png" alt="gh"><p>BEIN SPORT 5</p></div>
+    <div onclick="window.open('go:bein6')" class="main"><img src="https://imgur.com/0wBdLYb.png" alt="gh"><p>BEIN SPORT 6</p></div>
+    <div onclick="window.open('go:bein7')" class="main"><img src="https://imgur.com/iODFwZi.png" alt="gh"><p>BEIN SPORT 7</p></div>
+    <div onclick="window.open('go:bein8')" class="main"><img src="https://imgur.com/CaFEyVn.png" alt="gh"><p>BEIN SPORT 8</p></div>
+    <div onclick="window.open('go:bein9')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQANDF0Uorav74mKSRY_IxXeaLGSbinBuj97g&s" alt="bein"><p>BEIN SPORT 9</p></div>
+    <div onclick="window.open('go:bein')" class="main"><img src="https://i.imgur.com/RLrMBlm.png" alt="gh"><p>BEIN SPORT</p></div>
+    <div onclick="window.open('go:beinnews')" class="main"><img src="https://i.imgur.com/ZNjQzR5.png" alt="gh"><p>BEIN NEWS</p></div>
+    <div onclick="window.open('go:beinfr1')" class="main"><img src="https://imgur.com/tXqMkzA.png" alt="gh"><p>BEIN SPORT fr1</p></div>
+    <div onclick="window.open('go:beinfr2')" class="main"><img src="https://imgur.com/EG48QI7.png" alt="gh"><p>BEIN SPORT fr2</p></div>
+    <div onclick="window.open('go:beinfr3')" class="main"><img src="https://imgur.com/YbzCxeF.png" alt="gh"><p>BEIN SPORT fr3</p></div>
+    <div class="barre"></div>
+</div>
+    </section>
+    <section id="ssc" class="content-section">
+      <div class="menu" id="ssc">
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 1</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 2</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 3</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 4</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 5</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 6</p></div>
+</div>
+    </section>
+    <section id="maroc" class="content-section">
+       <div id="maroc" class="menu">
+ <div onclick="window.open('go:1m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%82%D9%86%D8%A7%D8%A9_%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89_Al_Aoula_Tv_Logo.png" alt=""><p>Al Aoula HD</p></div>
+    <div onclick="window.open('go:2m')" class="main"><img style="width: 60px;height:50px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/2M_TV_logo.svg/120px-2M_TV_logo.svg.png" alt=""><p>2M Maroc</p></div>
+        <div onclick="window.open('go:3m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo%2Barryadia%2Bmorocco.png" alt=""><p>Arryadia HD</p></div>
+    <div onclick="window.open('go:4m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Logo_tv_med_arrabia_nouveau.png" alt=""><p>Athaqafia HD</p></div>
+    <div onclick="window.open('go:5m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/fr/5/54/Logo_al_maghribia.png" alt=""><p>Al Maghribia HD</p></div>
+    <div onclick="window.open('go:6m')" class="main"><img style="width: 80px;height:80px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Assadissa_logo.png" alt=""><p>Assadissa HD</p></div>
+        <div onclick="window.open('go:7m')" class="main"><img style="width: 80px;height:55px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Logo_tv_med_aflam.png" alt=""><p>Aflam TV HD</p></div>
+    <div onclick="window.open('go:8m')" class="main"><img style="width: auto;height:60px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Tamazight-tv-chaine.png/120px-Tamazight-tv-chaine.png" alt=""><p><p>Tamazight TV</p></p></div>
+    <div onclick="window.open('go:9m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Laayoune_logo_png_tv.png" alt=""><p>Laâyoune TV HD</p></div>
+    <div onclick="window.open('go:media')" class="main"><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/c/ca/Medi_1_TV_logo.png/120px-Medi_1_TV_logo.png" alt=""><p>Medi 1 TV HD</p></div>
+    <div onclick="window.open('go:m24')" class="main"><img style="width: 60px;height:50px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/M24_tv_logo.jpg/120px-M24_tv_logo.jpg" alt=""><p>M24 Maroc HD</p></div>
+    <div onclick="window.open('go:télé')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Logotelemaroc.jpeg/120px-Logotelemaroc.jpeg" alt=""><p>Télé Maroc HD</p></div>
+    <div onclick="window.open('go:chada')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Chadatv_logo.png/126px-Chadatv_logo.png" alt=""><p>Chada TV HD</p></div>
+
+    <div onclick="window.open('go:canal')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Logo-canal-atlas-.png/176px-Logo-canal-atlas-.png" alt=""><p>Chada TV HD</p></div>
+    <div onclick="window.open('go:mbc5')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/MBC_5_TV_Channel_Logo.png" alt=""><p>MBC 5 HD</p></div>
+    <div onclick="window.open('go:tnthd3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo%2Barryadia%2Bmorocco.png" alt=""><p>Arryadia TNT HD</p></div>
+    <div onclick="window.open('go:rayadiasd')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo%2Barryadia%2Bmorocco.png" alt="gh"><p>Arryadia SD</p></div>
+</div>
+    </section>
+    <section id="france" class="content-section">
+      <div id="france" class="menu" >
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Logo_TF1_2013.svg/500px-Logo_TF1_2013.svg.png" alt="gh"><p>TF1 HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/France_2_-_logo_2018.svg/440px-France_2_-_logo_2018.svg.png" alt="gh"><p>france 2 HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/France_3_-_logo_2018.svg/2560px-France_3_-_logo_2018.svg.png" alt="gh"><p>france 3 HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/France_4_-_logo_2018.svg/440px-France_4_-_logo_2018.svg.png" alt="gh"><p>france 4 HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/France_5_-_logo_2018.svg/440px-France_5_-_logo_2018.svg.png" alt="gh"><p>france 5 HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Logo_Canal%2B_1995.svg/450px-Logo_Canal%2B_1995.svg.png" alt="gh"><p>Canal + HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_M6_%282020%2C_fond_clair%29.svg/400px-Logo_M6_%282020%2C_fond_clair%29.svg.png" alt="gh"><p>M6 HD</p></div>
+  </div>
+    </section>
+    <section id="" class="content-section">
+      
+    </section>
+    <section id="kids" class="content-section">
+      <div id="kids" class="menu" >
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/MBC_3_Transparent_Background_Logo.png" alt="gh"><p>MBC 3</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/%D9%83%D8%B1%D8%A7%D9%85%D9%8A%D8%B4.jpg" alt="gh"><p>karameesh</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/ar/2/21/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%82%D9%86%D8%A7%D8%A9_%D8%B7%D9%8A%D9%88%D8%B1_%D8%A7%D9%84%D8%AC%D9%86%D8%A9.svg" alt="gh"><p>Toyor Aljanah</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/ar/1/1b/TomandJerryTitleCard3.jpg" alt="gh"><p>Tom and Jerry</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Majid_TV_logo_2023.svg/800px-Majid_TV_logo_2023.svg.png" alt="gh"><p>Majd Kids TV HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://s2.dmcdn.net/u/6RS6a1clS17e7kXrb/200x200" alt="gh"><p>TAHA</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://yt3.googleusercontent.com/hYEEmF2Wp3caWLk_DKkk4I3nPhYb6Bs1V5lRUMslq-q5AOHU_t5_egQTHTBzSeyL_vThlAHpJA=s900-c-k-c0x00ffffff-no-rj" alt="gh"><p>SAT-7 KIDS</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_6Clkfz0mlTvJxKkhOjATJqpn9Kp_NuX3qA&s" alt="gh"><p>HodHod TV</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/ar/1/10/%D8%B4%D8%B9%D8%A7%D8%B1_%D8%B3%D8%A8%D9%8A%D8%B3%D8%AA%D9%88%D9%86.png" alt="gh"><p>SPACTOON TV</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://media.zid.store/10f0f934-b2a6-4646-abcc-9dad42a2dd74/a6e6405b-beb7-4162-95e2-726e5d2de5cd-200x.png" alt="gh"><p>Atfal Mawaheb</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU2PCGoIPQSm_DExC15vO8MoktxWzpCYTVOX70Qh6KKQ&s" alt="gh"><p>Mody Kids TV</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/en/d/d6/4Kids_Entertainment_logo.png" alt="gh"><p>4Kids HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISDPVTkT-0V4LWDJtIVBqjVeIoi5QBDIObw&s" alt="gh"><p>Wanasat Baby</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Cartoon_Network_Arabic_logo.png" alt="gh"><p>CN ARABIA</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://play-lh.googleusercontent.com/tAZ2H90uVGIB1GTO_t6nzZFFucF1p41qa_4uWSyQ-BRGZTmh4fH4_T52b-fgQ9rSib8" alt="gh"><p>WOLFOO IN ARABIC</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjthq4ZR6oLx1jps9JMa67voO-Mkd4jVSIapVCn3HOvSDJLnbzXF4C68DqqA-AF8O0pIfLe8Gth2BPs_0noTkXTfWbPeTbOX0IGyqP1UalnPwMQpYxqrFHa5X2DArtHnzktbkDl1Zs_FonaEYCqu9xWp8BPGeolJ5CC4a7YVeioDW4ubvl7jnCHB-wQ3TY/s800/masha-png-47260.png" alt="gh"><p>masha and bear</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0v5Ajbbs2KEc428vII_4eD6hQGMNEKE6ITA&s" alt="gh"><p>nastya بالعربية</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/sco/9/9d/Shaun_the_Sheep.PNG" alt="gh"><p>shaun the sheep</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ94-G9hXCUyFZoBSe3lvDmgMXwYOZ101csQ&s" alt="gh"><p>babybus arabic</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa3RI5CpXhBIocOlyqFWulkp7d8CzaLa0mkw&s" alt="gh"><p>Pippa Pig</p></div>
+  <div onclick="window.open('go:morphle')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk7x0A2WZwdJ-ltS_H8vHZEDlIQEsD200MVQ&s" alt="gh"><p>Mila and Morphle</p></div>
+  <div class="barre"></div>
+</div>
+    </section>
+    <section id="spain" class="content-section">
+      <div class="menu">
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Logo_TVE-Internacional.svg/1200px-Logo_TVE-Internacional.svg.png" alt=""><p>tve HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Logo_TVE-1.svg/380px-Logo_TVE-1.svg.png" alt=""><p>la 1 HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Logo_TVE-2.svg/300px-Logo_TVE-2.svg.png" alt=""><p>la 2 HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Logo_TVE-24h.svg/300px-Logo_TVE-24h.svg.png" alt=""><p>Canal 24 Horas</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Antena_3_%282017%29.svg/300px-Antena_3_%282017%29.svg.png" alt=""><p>Antena 3 HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Cuatro.svg/400px-Cuatro.svg.png" alt=""><p>Cuatro HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Telecinco_2024_Logo.svg/300px-Telecinco_2024_Logo.svg.png" alt=""><p>Telecinco HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/LaSexta_2024_Logo.svg/240px-LaSexta_2024_Logo.svg.png" alt=""><p>La Sexta HD</p></div>
+  <div class="barre"></div>
+</div>
+    </section>
+    <section id="rotana" class="content-section">
+      <div id="rotana" class="menu">
+    <div class="main">
+<div class="img-box"><img src="https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402472.webp" class="img-fluid" alt="Rotana Cinema KSA" loading="lazy"></div><p>Rotana Cinema KSA</p></div>
+<div class="barre"></div>
+</div>
+    </section>
+    <section id="news" class="content-section">
+      <div id="news" class="menu" >
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://habbabihd.com/tvlogo/aljazeera-arabic.jpg" alt="gh"><p>aljazeera</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://habbabihd.com/tvlogo/alarabiya-arabic.jpg" alt="gh"><p>alarabiya</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://habbabihd.com/tvlogo/Saudi-alikhbarya.jpg" alt="gh"><p>ksa_new</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://habbabihd.com/tvlogo/bbc-arabic.jpg" alt="gh"><p>BBC NEWS</p></div>
+  </div>
+    </section>
+    <section id="documentary" class="content-section">
+      <div id="documentary" class="menu">
+  <div onclick="window.open('go:Ajdoc')" class="main"><img src="https://upload.wikimedia.org/wikipedia/ar/e/e6/Al_Jazeera_Doc.png" alt=""><p>Aljazeera_Doc</p></div>
+    <div class="main">مجموعة 1</div>
+    <div class="main">مجموعة 2</div>
+    <div class="main">مجموعة 3</div>
+</div>
+    </section>
+    <section id="mbc" class="content-section">
+<div id="mbc" class="menu">
+    <div onclick="window.open('go:mbc')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Mbc1logo.png" alt="">MBC</div>
+  <div onclick="window.open('go:mbc2')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/MBC2_Logo.png" alt="">MBC 2</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/MBC3_logo_HQ.png" alt="">MBC 3</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/MBC_4_TV_Channel_Logo.png" alt="">MBC 4</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/5_MBC.webp/296px-5_MBC.webp.png" alt="">MBC 5</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/MBC_Iraq.svg" alt="">MBC iraq</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/MBC_Action_Logo.svg/2560px-MBC_Action_Logo.svg.png" alt="">MBC action</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/MBC_Drama_Logo.svg/2560px-MBC_Drama_Logo.svg.png" alt="">MBC drama</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/MBC_Drama_Plus_TV_Channel_Logo.png" alt="">MBC drama +</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/MBC_Masr_Logo.png" alt="">MBC masr</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/MBC_MASR_2.jpg" alt="">MBC masr 2</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/MBC_Max_Logo.svg/2560px-MBC_Max_Logo.svg.png" alt="">MBC max</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/MBC_Bollywood_TV_Channel_Logo.png/2560px-MBC_Bollywood_TV_Channel_Logo.png" alt="">MBC bollywood</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Wanasa.png" alt="">WANASAH</div>
+  <div class="barre"></div>
+</div>
+    </section>
+    </div>
+      <div id="sidebar" class="sidebar">
+    <button id="closeMenu" class="close-btn"><i class="fas fa-bars"></i></button>
+    <ul>
+      <li class="logo"><h2>RAYAN TV</h2></li>
+      <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+      <li><a href="#"><i class="fa-solid fa-earth"></i>website</a></li>
+      <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+      <li><a href="#"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
+      <li><a href="#"><i class="fab fa-youtube"></i>YouTube</a></li>
+      <li><a href="#"><i class="fab fa-tiktok"></i>TikTok</a></li>
+      <li><a href="#"><i class="fab fa-telegram"></i>Telegram</a></li>
+      <li><a href="#"><i class="fas fa-share-alt"></i>Share Apps</a></li>
+      <li><a href="#"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+    </ul>
+  </div>
+  <div id="overlay" class="overlay"></div>
+
+  <script>
+    const openMenu = document.getElementById('openMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    openMenu.addEventListener('click', () => {
+      sidebar.style.right = '0';
+      overlay.style.display = 'block';
+    });
+
+    closeMenu.addEventListener('click', () => {
+      sidebar.style.right = '-250px';
+      overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.style.right = '-250px';
+      overlay.style.display = 'none';
+    });
+  </script>
+    <script>
+        function openSection(sectionId) {
+            // إخفاء جميع الأقسام
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // إظهار القسم المختار
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        // عرض القسم الأساسي عند تحميل الصفحة
+        document.addEventListener("DOMContentLoaded", function() {
+            openSection('bein');
+        });
+    </script>
+    <script>
+    // منع النقر بزر الفأرة الأيمن
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    });
+
+    // منع استخدام مفاتيح الاختصار (مثل Ctrl+C)
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && (event.key === 'c' || event.key === 'u')) {
+            event.preventDefault();
+        }
+    });
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title></title>
+    <style>
+                  @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+      html, body {
+                              -webkit-user-select: none; /* Chrome, Safari, Opera */
+            -moz-user-select: none;    /* Firefox */
+            -ms-user-select: none;     /* Internet Explorer/Edge */
+            user-select: none;         /* Non-prefixed version */
+        background-color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+      }
+
+        .category-bar {
+            position: relative;
+  top: 46px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-around;
+    align-content: space-between;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #00881f;
+    border-bottom: 2px solid #00881f;
+    box-shadow: 0 3px 6px #737373;
+        }
+.category img{
+  background-color: #ffffff;
+  width: 40px;
+          height: 40px;
+          margin:0;
+          padding: 5px;
+          display: flex;
+          border-radius: 5px;
+          border: 1px solid #000000;
+          box-shadow: 0 4px 6px #383838e4;
+}
+.category p{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+}
+.category {
+            font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 12px;
+  position: relative;
+  top: -7px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: space-between;
+          flex-wrap: wrap;
+            background: none;
+            padding: 0;
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            text-decoration: none;
+            text-align:center;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #ffffff;
+            border: none;
+        }
+
+        .category:hover{
+            color: #000000;
+            border-radius: 6px;
+            margin: 0;
+            padding: 5px;
+            height: 65px;
+}
+        .content-section {
+            display: none;
+            padding: 0;
+            background-color: #ffffff;
+            margin-top: 10px;
+            border: 0px solid #ddd;
+        }
+                .main {
+  font-family: Georgia;
+  font-weight: 400;
+  font-style: normal;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          align-content: center;
+          flex-wrap: wrap;
+            background-color: #fff;
+            padding: 0;
+            width: 100px;
+            height: 120px;
+            margin: 5px;
+            text-decoration: none;
+            text-align:center;
+            border-radius: 8px;
+            cursor: pointer;
+            color: #000000;
+            border: 2px solid #00881f;
+            box-shadow: 0 4px 8px #5353538f;
+            font-size: 14px;
+}
+.barre{
+  font-family: Georgia;
+  font-weight: 400;
+  font-style: normal;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          align-content: center;
+          flex-wrap: wrap;
+            background: none;
+            padding: 0;
+            width: 100%;
+            height: 30px;
+            margin: 5px;
+            text-decoration: none;
+            text-align:center;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+          
+            font-size: 14px;
+}
+        .main p{
+            padding: 8px;
+            font-size: 10px;
+            margin-bottom: -12px;
+        }
+        .main img{
+                 width: 70px;
+          height: 50px;
+          margin: 0;
+          padding:8px;
+        }
+        .main:hover{
+    background: linear-gradient(to right, #00cd7d, #00881f);
+    color: #ffffff;
+    border: 2px solid #a70000;
+    border-radius: 5;
+}
+          .menu {
+            display: flex; /* مخفي بشكل افتراضي */
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      background-color: none;
+      margin: 0;
+      padding: 0;
+        }
+        .menu-btn {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+    font-size: 24px;
+    margin: 0;
+    border: none;
+    color: #ffffff;
+    background: none;
+}
+.search {
+  font-family: "Oswald", sans-serif;
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  top: 13px;
+  font-size: 25px;
+  color: #ffffff;
+}
+    .main li{
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      margin: 0;
+      padding: 5px;
+      flex-wrap: wrap;
+    }
+    .navbar {
+  position: fixed;
+  top:0;
+  right: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+    width: 100%;
+    height: 120px;
+    border-bottom: 2px solid #00881f;
+    background-color: #00881f;
+}
+    .navba {
+  position: fixed;
+  top: 0;
+  right: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+    width: 100%;
+    height: 80px;
+    border-bottom: 0px solid #880000;
+    background-color: #00881f;
+}
+.top-bar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+  top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    height: 0px;
+    justify-content: space-between;
+    background-color: #00881f;
+}
+.icon {
+    font-size: 24px;
+    margin: 0 5px;
+    padding: 0;
+    position: relative;
+  
+}
+.header{
+          margin-top: 120px;
+          display: flex;
+          justify-content: center;
+          padding: 0;
+        }
+        .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background: #fff;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+      transition: right 0.3s;
+      z-index: 1000;
+      display: flex;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    .sidebar ul li {
+      position: relative;
+      top: -15px;
+      border-bottom: 1px solid #00881f;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 8px #3030307a;
+    }
+    .sidebar ul li a {
+      display: flex;
+      margin: 0;
+      padding: 5px;
+      width: 100%;
+      text-decoration: none;
+      color: #000000;
+      font-size: 18px;
+    }
+    .sidebar ul li a i {
+      padding: 5px;
+      margin-left: 5px;
+      font-size: 20px;
+    }
+    .sidebar ul li a:hover {
+      background: #00881f;
+      color: #fff;
+      width: 100%;
+    }
+    .sidebar .close-btn {
+      display: none;
+      background: none;
+      padding: 0;
+      margin: 0;
+      width: 30px;
+      height: 30px;
+      border: none;
+      color: #fff;
+      font-size: 0px;
+      position: absolute;
+      top: 10px;
+      left: 28px;
+      cursor: pointer;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.259);
+      display: none;
+      z-index: 999;
+    }
+     ul .logo{
+       position: relative;
+       top: -18px;
+       width: 100%;
+       margin: 0;
+       text-align: center;
+       padding: 16px 12px;
+       height: 120px;
+       background-color: #00881f;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: #fff;
+       border-bottom: 1px solid #2b2b2b;
+     }
+     .{
+       position: fixed;
+     }
+    </style>
+</head>
+<body>
+   <div class="navbar">
+        <div class="top-bar">
+<span onclick="window.open('go:https/search')" class="search"><i class="fas fa-search"></i></span>
+<span class="search">AYMEN TV</span>
+<span class="search"></span>
+</div>
+ <div class="navbar1">
+      <div class="category-bar">
+        <button class="category" onclick="openSection('bein')"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/BeIN-Sports-Logo.svg" alt=""><p>bein sports</p></button>
+        <button class="category" onclick="openSection('ssc')"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC HD</p></button>
+        <button class="category" onclick="openSection('sports')"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4yCSbPtid76nZy0fIllKVfEQ3aug79nMiCA&amp;usqp=CAU" alt=""><p>SPORTS HD</p></button>
+        <button class="category" onclick="openSection('maroc')"><img src="https://png.pngtree.com/png-clipart/20220704/ourmid/pngtree-morocco-flag-png-image_5686509.png" alt=""><p>MAROC HD</p></button>
+        <button class="category" onclick="openSection('france')"><img src="https://png.pngtree.com/png-clipart/20220804/ourmid/pngtree-france-flag-pin-badge-png-image_6098798.png" alt=""><p>FRANCE HD</p></button>
+        <button class="category" onclick="openSection('spain')"><img src="https://png.pngtree.com/png-clipart/20231018/original/pngtree-spain-spanish-patriotism-spain-picture-image_13178525.png" alt=""><p>SPAIN HD</p></button>
+        <button class="category" onclick="openSection('kids')"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1FGTKwe5pbmE4uoMLUFlJ3AhhGpQ4CyuNr6BX3LXSViRI_XR2_NofTMzKSdBLnqKk6qfdAQI6uxNSbUTlv4Bcyrm-OzfuTUG6ped3vUpKpY8ydY3i7Ox2m36y612fDfQJfuUq_iI9j0J0qzRTiNZTsAJcyPZSii-bJZHzhiGGmFRsPT-4BGqT_jDiV5k/s2000/Picsart_24-11-24_16-55-33-068.jpg" alt=""><p>KIDS HD</p></button>
+        <button class="category" onclick="openSection('documentary')"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/AlWathaeqya.png" alt=""><p>DOCUMENTARY</p></button>
+        <button class="category" onclick="openSection('mbc')"><img src="https://upload.wikimedia.org/wikipedia/commons/8/80/MBC_Group.png" alt=""><p>MBC TV</p></button>
+        <button class="category" onclick="openSection('news')"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigmr4fmuejc0JRN3gEQSNuaCH1OazdAr26JCMJHSjPI3uFZVG9-4-jYEh4h5GAWpyNX5xX2v45BQu-jYBgP3d7J4q0BhEKlrx-6gHCyhocVODIMby7kFzZhduPy1q34myjrw4lf5PYaPDLQStCKz2sQCUWisybrwDoM8EETgwXyQKxvMxU9oik5hyphenhyphena5Uk/s2000/Picsart_24-11-06_16-52-53-557.png" alt=""><p>NEWS TV</p></button>
+        <button class="category" onclick="openSection('islam')"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2k3IGoly1jYIDSYZoavcvZCj_C5E9XdJjhVWENAKfIZMzXxPrZ9_6xDH2wzOUw9BFE3f_1U2dLZLCSIkagb-1MjXL53pIZ4l9i5sBhADfCur8-H7TYg0pcE2Ukija4BBV1jOnbq1hneja3m4AsyMUoOwpHyJV6bucvLJeQKq-NoeEk6aXR2I89xX1aJc/s720/IMG_20241103_144955.png" alt=""><p>ISLAM TV</p></button>
+        <button class="category" onclick="openSection('osn')"><img src="https://iconape.com/wp-content/png_logo_vector/osn.png" alt=""><p>OSN TV</p></button>
+        <button class="category" onclick="openSection('rotana')"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSVcu7_hLzD9b4yP4pMxaQ-lrYrDqr0Irw9g&usqp=CAU" alt=""><p>ROTANA TV</p></button>
+    </div>
+    </div>
+    </div>
+     <button id="openMenu" class="menu-btn"><i class="fas fa-bars"></i></button>
+    <div class="header">
+    <section id="bein" class="content-section">
+  <div id="bein" class="menu">
+<div onclick="window.open('go:bein1')" class="main"><img src="https://i.imgur.com/Vtk2cGI.png" alt="gh"><p>BEIN SPORT 1</p></div>
+    <div onclick="window.open('go:bein2')" class="main"><img src="https://i.imgur.com/vUJZSvs.png" alt=""><p>BEIN SPORT 2</p></div>
+    <div onclick="window.open('go:bein3')" class="main"><img src="https://i.imgur.com/UYSMao3.png" alt="gh"><p>BEIN SPORT 3</p></div>
+    <div onclick="window.open('go:bein4')" class="main"><img src="https://i.imgur.com/vwAgJNi.png" alt="gh"><p>BEIN SPORT 4</p></div>
+    <div onclick="window.open('go:bein5')" class="main"><img src="https://imgur.com/2Rha5aY.png" alt="gh"><p>BEIN SPORT 5</p></div>
+    <div onclick="window.open('go:bein6')" class="main"><img src="https://imgur.com/0wBdLYb.png" alt="gh"><p>BEIN SPORT 6</p></div>
+    <div onclick="window.open('go:bein7')" class="main"><img src="https://imgur.com/iODFwZi.png" alt="gh"><p>BEIN SPORT 7</p></div>
+    <div onclick="window.open('go:bein8')" class="main"><img src="https://imgur.com/CaFEyVn.png" alt="gh"><p>BEIN SPORT 8</p></div>
+    <div onclick="window.open('go:bein9')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQANDF0Uorav74mKSRY_IxXeaLGSbinBuj97g&s" alt="bein"><p>BEIN SPORT 9</p></div>
+    <div onclick="window.open('go:bein')" class="main"><img src="https://i.imgur.com/RLrMBlm.png" alt="gh"><p>BEIN SPORT</p></div>
+    <div onclick="window.open('go:beinnews')" class="main"><img src="https://i.imgur.com/ZNjQzR5.png" alt="gh"><p>BEIN NEWS</p></div>
+    <div onclick="window.open('go:beinfr1')" class="main"><img src="https://imgur.com/tXqMkzA.png" alt="gh"><p>BEIN SPORT fr1</p></div>
+    <div onclick="window.open('go:beinfr2')" class="main"><img src="https://imgur.com/EG48QI7.png" alt="gh"><p>BEIN SPORT fr2</p></div>
+    <div onclick="window.open('go:beinfr3')" class="main"><img src="https://imgur.com/YbzCxeF.png" alt="gh"><p>BEIN SPORT fr3</p></div>
+    <div class="barre"></div>
+</div>
+    </section>
+    <section id="ssc" class="content-section">
+      <div class="menu" id="ssc">
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 1</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 2</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 3</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 4</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 5</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ssc_sports.png" alt=""><p>SSC 6</p></div>
+</div>
+    </section>
+    <section id="maroc" class="content-section">
+       <div id="maroc" class="menu">
+ <div onclick="window.open('go:1m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%82%D9%86%D8%A7%D8%A9_%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89_Al_Aoula_Tv_Logo.png" alt=""><p>Al Aoula HD</p></div>
+    <div onclick="window.open('go:2m')" class="main"><img style="width: 60px;height:50px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/2M_TV_logo.svg/120px-2M_TV_logo.svg.png" alt=""><p>2M Maroc</p></div>
+        <div onclick="window.open('go:3m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo%2Barryadia%2Bmorocco.png" alt=""><p>Arryadia HD</p></div>
+    <div onclick="window.open('go:4m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Logo_tv_med_arrabia_nouveau.png" alt=""><p>Athaqafia HD</p></div>
+    <div onclick="window.open('go:5m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/fr/5/54/Logo_al_maghribia.png" alt=""><p>Al Maghribia HD</p></div>
+    <div onclick="window.open('go:6m')" class="main"><img style="width: 80px;height:80px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Assadissa_logo.png" alt=""><p>Assadissa HD</p></div>
+        <div onclick="window.open('go:7m')" class="main"><img style="width: 80px;height:55px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Logo_tv_med_aflam.png" alt=""><p>Aflam TV HD</p></div>
+    <div onclick="window.open('go:8m')" class="main"><img style="width: auto;height:60px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Tamazight-tv-chaine.png/120px-Tamazight-tv-chaine.png" alt=""><p><p>Tamazight TV</p></p></div>
+    <div onclick="window.open('go:9m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Laayoune_logo_png_tv.png" alt=""><p>Laâyoune TV HD</p></div>
+    <div onclick="window.open('go:media')" class="main"><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/c/ca/Medi_1_TV_logo.png/120px-Medi_1_TV_logo.png" alt=""><p>Medi 1 TV HD</p></div>
+    <div onclick="window.open('go:m24')" class="main"><img style="width: 60px;height:50px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/M24_tv_logo.jpg/120px-M24_tv_logo.jpg" alt=""><p>M24 Maroc HD</p></div>
+    <div onclick="window.open('go:télé')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Logotelemaroc.jpeg/120px-Logotelemaroc.jpeg" alt=""><p>Télé Maroc HD</p></div>
+    <div onclick="window.open('go:chada')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Chadatv_logo.png/126px-Chadatv_logo.png" alt=""><p>Chada TV HD</p></div>
+
+    <div onclick="window.open('go:canal')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Logo-canal-atlas-.png/176px-Logo-canal-atlas-.png" alt=""><p>Chada TV HD</p></div>
+    <div onclick="window.open('go:mbc5')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/MBC_5_TV_Channel_Logo.png" alt=""><p>MBC 5 HD</p></div>
+    <div onclick="window.open('go:tnthd3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo%2Barryadia%2Bmorocco.png" alt=""><p>Arryadia TNT HD</p></div>
+    <div onclick="window.open('go:rayadiasd')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo%2Barryadia%2Bmorocco.png" alt="gh"><p>Arryadia SD</p></div>
+</div>
+    </section>
+    <section id="france" class="content-section">
+      <div id="france" class="menu" >
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Logo_TF1_2013.svg/500px-Logo_TF1_2013.svg.png" alt="gh"><p>TF1 HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/France_2_-_logo_2018.svg/440px-France_2_-_logo_2018.svg.png" alt="gh"><p>france 2 HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/France_3_-_logo_2018.svg/2560px-France_3_-_logo_2018.svg.png" alt="gh"><p>france 3 HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/France_4_-_logo_2018.svg/440px-France_4_-_logo_2018.svg.png" alt="gh"><p>france 4 HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/France_5_-_logo_2018.svg/440px-France_5_-_logo_2018.svg.png" alt="gh"><p>france 5 HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Logo_Canal%2B_1995.svg/450px-Logo_Canal%2B_1995.svg.png" alt="gh"><p>Canal + HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_M6_%282020%2C_fond_clair%29.svg/400px-Logo_M6_%282020%2C_fond_clair%29.svg.png" alt="gh"><p>M6 HD</p></div>
+  </div>
+    </section>
+    <section id="" class="content-section">
+      
+    </section>
+    <section id="kids" class="content-section">
+      <div id="kids" class="menu" >
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/MBC_3_Transparent_Background_Logo.png" alt="gh"><p>MBC 3</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/%D9%83%D8%B1%D8%A7%D9%85%D9%8A%D8%B4.jpg" alt="gh"><p>karameesh</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/ar/2/21/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%82%D9%86%D8%A7%D8%A9_%D8%B7%D9%8A%D9%88%D8%B1_%D8%A7%D9%84%D8%AC%D9%86%D8%A9.svg" alt="gh"><p>Toyor Aljanah</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/ar/1/1b/TomandJerryTitleCard3.jpg" alt="gh"><p>Tom and Jerry</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Majid_TV_logo_2023.svg/800px-Majid_TV_logo_2023.svg.png" alt="gh"><p>Majd Kids TV HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://s2.dmcdn.net/u/6RS6a1clS17e7kXrb/200x200" alt="gh"><p>TAHA</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://yt3.googleusercontent.com/hYEEmF2Wp3caWLk_DKkk4I3nPhYb6Bs1V5lRUMslq-q5AOHU_t5_egQTHTBzSeyL_vThlAHpJA=s900-c-k-c0x00ffffff-no-rj" alt="gh"><p>SAT-7 KIDS</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_6Clkfz0mlTvJxKkhOjATJqpn9Kp_NuX3qA&s" alt="gh"><p>HodHod TV</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/ar/1/10/%D8%B4%D8%B9%D8%A7%D8%B1_%D8%B3%D8%A8%D9%8A%D8%B3%D8%AA%D9%88%D9%86.png" alt="gh"><p>SPACTOON TV</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://media.zid.store/10f0f934-b2a6-4646-abcc-9dad42a2dd74/a6e6405b-beb7-4162-95e2-726e5d2de5cd-200x.png" alt="gh"><p>Atfal Mawaheb</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU2PCGoIPQSm_DExC15vO8MoktxWzpCYTVOX70Qh6KKQ&s" alt="gh"><p>Mody Kids TV</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/en/d/d6/4Kids_Entertainment_logo.png" alt="gh"><p>4Kids HD</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISDPVTkT-0V4LWDJtIVBqjVeIoi5QBDIObw&s" alt="gh"><p>Wanasat Baby</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Cartoon_Network_Arabic_logo.png" alt="gh"><p>CN ARABIA</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://play-lh.googleusercontent.com/tAZ2H90uVGIB1GTO_t6nzZFFucF1p41qa_4uWSyQ-BRGZTmh4fH4_T52b-fgQ9rSib8" alt="gh"><p>WOLFOO IN ARABIC</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjthq4ZR6oLx1jps9JMa67voO-Mkd4jVSIapVCn3HOvSDJLnbzXF4C68DqqA-AF8O0pIfLe8Gth2BPs_0noTkXTfWbPeTbOX0IGyqP1UalnPwMQpYxqrFHa5X2DArtHnzktbkDl1Zs_FonaEYCqu9xWp8BPGeolJ5CC4a7YVeioDW4ubvl7jnCHB-wQ3TY/s800/masha-png-47260.png" alt="gh"><p>masha and bear</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0v5Ajbbs2KEc428vII_4eD6hQGMNEKE6ITA&s" alt="gh"><p>nastya بالعربية</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/sco/9/9d/Shaun_the_Sheep.PNG" alt="gh"><p>shaun the sheep</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ94-G9hXCUyFZoBSe3lvDmgMXwYOZ101csQ&s" alt="gh"><p>babybus arabic</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa3RI5CpXhBIocOlyqFWulkp7d8CzaLa0mkw&s" alt="gh"><p>Pippa Pig</p></div>
+  <div onclick="window.open('go:morphle')" class="main"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk7x0A2WZwdJ-ltS_H8vHZEDlIQEsD200MVQ&s" alt="gh"><p>Mila and Morphle</p></div>
+  <div class="barre"></div>
+</div>
+    </section>
+    <section id="spain" class="content-section">
+      <div class="menu">
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Logo_TVE-Internacional.svg/1200px-Logo_TVE-Internacional.svg.png" alt=""><p>tve HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Logo_TVE-1.svg/380px-Logo_TVE-1.svg.png" alt=""><p>la 1 HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Logo_TVE-2.svg/300px-Logo_TVE-2.svg.png" alt=""><p>la 2 HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Logo_TVE-24h.svg/300px-Logo_TVE-24h.svg.png" alt=""><p>Canal 24 Horas</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Antena_3_%282017%29.svg/300px-Antena_3_%282017%29.svg.png" alt=""><p>Antena 3 HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Cuatro.svg/400px-Cuatro.svg.png" alt=""><p>Cuatro HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Telecinco_2024_Logo.svg/300px-Telecinco_2024_Logo.svg.png" alt=""><p>Telecinco HD</p></div>
+  <div class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/LaSexta_2024_Logo.svg/240px-LaSexta_2024_Logo.svg.png" alt=""><p>La Sexta HD</p></div>
+  <div class="barre"></div>
+</div>
+    </section>
+    <section id="rotana" class="content-section">
+      <div id="rotana" class="menu">
+    <div class="main">
+<div class="img-box"><img src="https://s3.eu-central-1.amazonaws.com/rotana.website/channels/1688402472.webp" class="img-fluid" alt="Rotana Cinema KSA" loading="lazy"></div><p>Rotana Cinema KSA</p></div>
+<div class="barre"></div>
+</div>
+    </section>
+    <section id="news" class="content-section">
+      <div id="news" class="menu" >
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://habbabihd.com/tvlogo/aljazeera-arabic.jpg" alt="gh"><p>aljazeera</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://habbabihd.com/tvlogo/alarabiya-arabic.jpg" alt="gh"><p>alarabiya</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://habbabihd.com/tvlogo/Saudi-alikhbarya.jpg" alt="gh"><p>ksa_new</p></div>
+  <div onclick="window.open('go:beinfr3')" class="main"><img src="https://habbabihd.com/tvlogo/bbc-arabic.jpg" alt="gh"><p>BBC NEWS</p></div>
+  </div>
+    </section>
+    <section id="documentary" class="content-section">
+      <div id="documentary" class="menu">
+  <div onclick="window.open('go:Ajdoc')" class="main"><img src="https://upload.wikimedia.org/wikipedia/ar/e/e6/Al_Jazeera_Doc.png" alt=""><p>Aljazeera_Doc</p></div>
+    <div class="main">مجموعة 1</div>
+    <div class="main">مجموعة 2</div>
+    <div class="main">مجموعة 3</div>
+</div>
+    </section>
+    <section id="mbc" class="content-section">
+<div id="mbc" class="menu">
+    <div onclick="window.open('go:mbc')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Mbc1logo.png" alt="">MBC</div>
+  <div onclick="window.open('go:mbc2')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/MBC2_Logo.png" alt="">MBC 2</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/MBC3_logo_HQ.png" alt="">MBC 3</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/MBC_4_TV_Channel_Logo.png" alt="">MBC 4</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/5_MBC.webp/296px-5_MBC.webp.png" alt="">MBC 5</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/MBC_Iraq.svg" alt="">MBC iraq</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/MBC_Action_Logo.svg/2560px-MBC_Action_Logo.svg.png" alt="">MBC action</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/MBC_Drama_Logo.svg/2560px-MBC_Drama_Logo.svg.png" alt="">MBC drama</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/MBC_Drama_Plus_TV_Channel_Logo.png" alt="">MBC drama +</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/MBC_Masr_Logo.png" alt="">MBC masr</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/MBC_MASR_2.jpg" alt="">MBC masr 2</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/MBC_Max_Logo.svg/2560px-MBC_Max_Logo.svg.png" alt="">MBC max</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/MBC_Bollywood_TV_Channel_Logo.png/2560px-MBC_Bollywood_TV_Channel_Logo.png" alt="">MBC bollywood</div>
+  <div onclick="window.open('go:mbc3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Wanasa.png" alt="">WANASAH</div>
+  <div class="barre"></div>
+</div>
+    </section>
+    </div>
+      <div id="sidebar" class="sidebar">
+    <button id="closeMenu" class="close-btn"><i class="fas fa-bars"></i></button>
+    <ul>
+      <li class="logo"><h2>RAYAN TV</h2></li>
+      <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+      <li><a href="#"><i class="fa-solid fa-earth"></i>website</a></li>
+      <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+      <li><a href="#"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
+      <li><a href="#"><i class="fab fa-youtube"></i>YouTube</a></li>
+      <li><a href="#"><i class="fab fa-tiktok"></i>TikTok</a></li>
+      <li><a href="#"><i class="fab fa-telegram"></i>Telegram</a></li>
+      <li><a href="#"><i class="fas fa-share-alt"></i>Share Apps</a></li>
+      <li><a href="#"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+    </ul>
+  </div>
+  <div id="overlay" class="overlay"></div>
+
+  <script>
+    const openMenu = document.getElementById('openMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    openMenu.addEventListener('click', () => {
+      sidebar.style.right = '0';
+      overlay.style.display = 'block';
+    });
+
+    closeMenu.addEventListener('click', () => {
+      sidebar.style.right = '-250px';
+      overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.style.right = '-250px';
+      overlay.style.display = 'none';
+    });
+  </script>
+    <script>
+        function openSection(sectionId) {
+            // إخفاء جميع الأقسام
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // إظهار القسم المختار
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        // عرض القسم الأساسي عند تحميل الصفحة
+        document.addEventListener("DOMContentLoaded", function() {
+            openSection('bein');
+        });
+    </script>
+    <script>
+    // منع النقر بزر الفأرة الأيمن
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    });
+
+    // منع استخدام مفاتيح الاختصار (مثل Ctrl+C)
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && (event.key === 'c' || event.key === 'u')) {
+            event.preventDefault();
+        }
+    });
+</script>
+</body>
+</html>
